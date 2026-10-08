@@ -86,11 +86,30 @@
                 <strong id="previsao">Não disponível</strong>
             </div>
 
-            <p class="observacao">
-                O estado real é calculado pelas regras do jogo.
-                A previsão será exibida após a integração do modelo.
-            </p>
+           <p class="observacao">
+           A previsão da IA é comparada ao estado real
+           após cada jogada. Os erros são registrados
+           para avaliar o desempenho do classificador.
+</p>
         </section>
+
+<section class="placar" aria-label="Desempenho da IA">
+    <div>
+        <strong id="acertos-ia">0</strong>
+        <span>Acertos da IA</span>
+    </div>
+
+    <div>
+        <strong id="erros-ia">0</strong>
+        <span>Erros da IA</span>
+    </div>
+
+    <div>
+        <strong id="acuracia-ia">—</strong>
+        <span>Acurácia da IA</span>
+    </div>
+</section>
+
 
         <section class="placar">
             <div>
