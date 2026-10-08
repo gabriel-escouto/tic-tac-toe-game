@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, recall_score, confusion_matrix, f1_score, ConfusionMatrixDisplay, classification_report
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, ConfusionMatrixDisplay, classification_report
 from sklearn.utils import resample
 import matplotlib.pyplot as plt
 
@@ -29,11 +29,11 @@ treino_bal = pd.concat([outras, empate_up]).sample(frac=1, random_state=42)
 
 print("Depois:\n", treino_bal['classe'].value_counts())
 
-x_treino = treino_bal.drop(columns=['classe'])
+x_treino = treino_bal.drop(columns=['classe']).astype(int)
 y_treino = treino_bal['classe']
-x_teste = teste.drop(columns=['classe'])
+x_teste = teste.drop(columns=['classe']).astype(int)
 y_teste = teste['classe']
-x_validacao = validacao.drop(columns=['classe'])
+x_validacao = validacao.drop(columns=['classe']).astype(int)
 y_validacao = validacao['classe']
 
 resultados = {}
